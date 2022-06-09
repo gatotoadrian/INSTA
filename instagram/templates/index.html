@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content%}
+{{block.super}}
+<div class="container" style="height: 55em; width: 60em;">
+    <br>
+    <h3>Instagram is a popular<span style="color: darkgoldenrod;"> photo</span> sharing app.</h3>
+    <br>
+   <div class="row">   
+        {% for image in images %}
+        <div class="col-sm-4">
+            <div class="card">
+              <img src="{{image.image.url}}" height="100%" width="100%" class="img-responsive" data-bs-toggle="modal" data-bs-target="#expand{{image.id}}" alt="">
+              <div class="card-body">
+                 <form action="{% url 'like' image.id %}" class="float-right">
+                  {% csrf_token %}
+                 
+                  <div class="row">
+                      <button type="submit" name="image_id" value={{image.id}}
+                      style="border: 0px; background-color: transparent; margin-bottom: 1rem;"><i
+                          class="far fa-heart"></i></button>
+                      <p> {{image.likes|length}} Likes</p>
+                    </form>
+                    <h5 class="card-title">{{image.name}}</h5>
+                  </div>
+                        
+                         <div>
+                          <p class="card-text">{{image.caption}}</p>
+                         </div>
+                         <div>
+                          <p class="card-text">{{image.comments}}</p>  
+                 </div>
+              </div> 
+                <hr>
+            </div>
+        </div>
+        {% endfor%}    
+        
+        
+   </div>
+</div>
+<br>
+<br>
+{% endblock%}
+

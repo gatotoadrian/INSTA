@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% if user %}
+        <h3>Found {{ user| length }} of searched term <span style="color: white;">{{ message }}</span></h3>
+        {% else%}
+        <h2>Found 0 images for the search_word {{ message }}</h2>
+        {% endif%}
+    </div>
+    <div class="row">
+     {% for profile in user %}
+    <div class="col-md-3">
+        <div class="card" style="width: 20rem; height: auto;">
+            <img src="{{profile.photo.url}}" class="img-responsive" data-bs-toggle="modal" data-bs-target="#expand{{image.id}}" alt="">
+            <a href="{% url 'profile'  %}"><div class="card-body">
+                <h5 class="card-title">{{profile.name}}</h5>
+                <p class="card-text">Username: <span style="color: green;">{{profile.username}}</span> </p>
+            </div>
+            </a>  
+            <div>
+                <h5 class="card-title"><span style="color: chocolate;">{{profile.email}}</span></h5>
+            </div>
+        </div>
+    </div>
+    <br>
+     {% endfor%} 
+    </div>
+</div>
+
+{% endblock%}

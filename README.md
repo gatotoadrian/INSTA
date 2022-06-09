@@ -66,6 +66,7 @@ $ git clone
   ```
 - Test it if its working using;
   ```
+  
   python3.6 manage.py test
   ```
 - Open the application on your browser , preferably `chrome` using port `127.0.0.1:8000`

@@ -28,6 +28,7 @@ These are the actions the user will do, inputs required and their outputs on the
 
 
 
+
   | Action    | Input                                      |Output                         |
   | ----------|:-------------                              | :------                       |
   | Load page | On page load                               | Displays the homepage         |

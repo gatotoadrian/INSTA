@@ -14,7 +14,7 @@ class Profile(models.Model):
     
 
     def delete_profile(self):
-        self.delete()
+    
 class Following(models.Model) :
     username = models.CharField(blank=True,max_length = 255)
     followed = models.CharField(blank=True,max_length = 255)

@@ -76,10 +76,6 @@ $ git clone
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- I would like to acknowledge Moringa school for giving me this opportunity to learn software development.
-- Appreciations to  my TM `Nancy Umutoniwase` for the support she gives me.
 
 ## 📝 License
 

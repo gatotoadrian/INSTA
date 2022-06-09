@@ -23,7 +23,7 @@ class Following(models.Model) :
         return f'{self.username}'
         
 class Image( models.Model):
-    image=models.ImageField(upload_to='images')
+    image=models.ImageField(upload_to='images') 
     name=models.CharField(max_length=30)
     caption=models.CharField(max_length=30)
     profile=models.ForeignKey(Profile, on_delete=CASCADE)

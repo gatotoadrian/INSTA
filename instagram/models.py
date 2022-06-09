@@ -4,7 +4,7 @@ from django.db import models
 from django.db.models.deletion import CASCADE
 
 # Create your models here.
-class Profile(models.Model):
+class Profile(models.Model):  
     user=models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     photo=models.ImageField(upload_to='images')
     bio=models.TextField(max_length=1200)

@@ -27,6 +27,7 @@ As a user of the application I should be able to:
 These are the actions the user will do, inputs required and their outputs on the page. 
 
 
+
   | Action    | Input                                      |Output                         |
   | ----------|:-------------                              | :------                       |
   | Load page | On page load                               | Displays the homepage         |

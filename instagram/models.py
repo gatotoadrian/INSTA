@@ -9,11 +9,9 @@ class Profile(models.Model):
     photo=models.ImageField(upload_to='images')
     bio=models.TextField(max_length=1200)
 
-
     def save_profile(self):
         self.save()
     
-
     
 class Following(models.Model) :
     username = models.CharField(blank=True,max_length = 255)
